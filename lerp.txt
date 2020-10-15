@@ -1,0 +1,21 @@
+ private IEnumerator MoveToTarget()
+    {
+        float elapsedTime = 0;
+
+        while (elapsedTime < timeToMove)
+        {
+            elapsedTime += Time.deltaTime;
+
+            if (canMove)
+            {
+                targetGameObject.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime/timeToMove);
+            }
+
+            if (canRotate)
+            {
+                targetGameObject.transform.localRotation = Quaternion.Lerp(startRotation, targetRotation, elapsedTime/timeToMove);
+            }
+            
+            yield return null;
+        } 
+    }
