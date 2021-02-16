@@ -7,8 +7,8 @@
             elapsedTime += Time.deltaTime;
 
             if (canMove)
-            {
-                targetGameObject.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime/timeToMove);
+            {                                                     
+                targetGameObject.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime/timeToMove); //remember, the start and target position must be local
             }
 
             if (canRotate)
