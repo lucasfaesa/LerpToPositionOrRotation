@@ -10,7 +10,7 @@
             {                                                     
                 targetGameObject.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, elapsedTime/timeToMove); //remember, the start and target position must be local
                 //with ease
-                targetGameObject.transform.localPosition = Vector3.Lerp(startPosition, targetPosition,Mathf.SmoothStep(0.0, 1.0, elapsedTime/timeToMove)); //remember, the start and target position must be local
+                targetGameObject.transform.localPosition = Vector3.Lerp(startPosition, targetPosition,Mathf.SmoothStep(0.0f, 1.0f, elapsedTime/timeToMove)); //remember, the start and target position must be local
             }
 
             if (canRotate)
